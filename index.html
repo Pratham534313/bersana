@@ -1,275 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Barsana Realities | Real Estate in Gujarat (Design Demo)</title>
-<meta name="description" content="Demo redesign for Barsana Realities: explore thoughtfully designed spaces and send a property enquiry.">
-<meta property="og:title" content="Barsana Realities">
-<meta property="og:description" content="Find a place that feels like home. Design demo.">
-<meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#14251f"><meta name="description" content="A real estate website concept for showcasing projects, property details and enquiries in Bhuj.">
+<title>Barsana Realities | Property, Presented Better</title>
 <style>
-:root{--g:#173D32;--iv:#F8F6F0;--au:#C5A46D;--ch:#242824;--w:#fff;--mut:#5b625d;--line:#e4dfd2;--card:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--iv:#121a16;--card:#1b2620;--ch:#ece8dc;--mut:#a9b2ac;--line:#2d3b33;--g:#0f2a22}}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px;height:100%}
-body{margin:0;background:var(--iv);color:var(--ch);font:400 16px/1.65 Inter,system-ui,sans-serif}
-h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:500;line-height:1.15;margin:0}
-a{color:inherit}
-.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
-section{padding:88px 0}
-h2{font-size:clamp(28px,4vw,42px);margin-bottom:16px}
-.lead{color:var(--mut);max-width:60ch}
-:focus-visible{outline:3px solid var(--au);outline-offset:3px}
-.btn{display:inline-block;border:1px solid var(--au);background:var(--au);color:#1a1a14;padding:13px 26px;font:600 15px Inter,sans-serif;cursor:pointer;text-decoration:none;border-radius:3px;transition:background .2s,color .2s}
-.btn:hover{background:transparent;color:var(--au)}
-.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
-.btn.ghost:hover{background:#fff;color:var(--g)}
-.btn.dark{background:var(--g);border-color:var(--g);color:#fff}
-.btn.dark:hover{background:transparent;color:var(--g)}
-@media (prefers-color-scheme:dark){.btn.dark{background:var(--au);border-color:var(--au);color:#1a1a14}}
-header{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s}
-header.solid{background:var(--g);box-shadow:0 1px 0 rgba(255,255,255,.08)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{font:500 24px 'Playfair Display',serif;color:#fff;text-decoration:none;letter-spacing:.02em}
-.logo b{color:var(--au);font-weight:500}
-.links{display:flex;gap:28px;align-items:center}
-.links a{color:#fff;text-decoration:none;font-size:15px;opacity:.9}
-.links a:hover{color:var(--au)}
-.burger{display:none;background:none;border:0;color:#fff;padding:8px;cursor:pointer}
-@media(max-width:860px){
-.burger{display:block}
-.links{position:absolute;top:100%;left:0;right:0;background:var(--g);flex-direction:column;padding:18px 22px 26px;gap:18px;align-items:flex-start;display:none}
-.links.open{display:flex}
-header{background:var(--g)}}
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;color:#fff;padding:120px 0 80px;overflow:hidden;background:#0e2a22}
-.hero>svg{position:absolute;inset:0;width:100%;height:100%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,38,30,.82) 0%,rgba(14,38,30,.45) 55%,rgba(14,38,30,.1) 100%)}
-.hero .wrap{position:relative;z-index:2}
-.hero h1{font-size:clamp(40px,7vw,78px);max-width:13ch}
-.hero p{max-width:46ch;font-size:19px;margin:22px 0 34px;opacity:.92}
-.hero .row{display:flex;gap:14px;flex-wrap:wrap}
-.tag{position:absolute;right:22px;bottom:18px;z-index:2;font-size:12px;color:#fff;opacity:.75}
-.demo{display:inline-block;font-size:12px;border:1px solid var(--au);color:var(--au);padding:2px 10px;border-radius:2px;margin-bottom:18px}
-.intro{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.intro .pts{display:grid;gap:18px}
-.pts div{border-left:2px solid var(--au);padding-left:18px}
-.pts h3{font-size:20px;margin-bottom:4px}
-.pts p{margin:0;color:var(--mut)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
-.card .img{aspect-ratio:4/3;overflow:hidden;position:relative}
-.card .img svg{width:100%;height:100%;display:block;transition:transform .6s}
-.card:hover .img svg{transform:scale(1.04)}
-.card .body{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
-.card h3{font-size:22px}
-.card small{color:var(--au);font-weight:600;font-size:13px}
-.card p{margin:0 0 10px;color:var(--mut);font-size:15px;flex:1}
-.card .btn{align-self:flex-start;padding:10px 20px;font-size:14px}
-.badge{position:absolute;left:12px;top:12px;background:rgba(14,38,30,.85);color:#fff;font-size:11px;padding:3px 9px;border-radius:2px}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.split .pic{aspect-ratio:5/4;border-radius:4px;overflow:hidden;position:relative}
-.split .pic svg{width:100%;height:100%;display:block}
-.why{background:var(--g);color:#fff}
-.why .lead{color:#cfd8d2}
-.four{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;margin-top:44px}
-.four div{border-top:1px solid var(--au);padding-top:18px}
-.four h3{font-size:21px;margin:12px 0 8px}
-.four p{margin:0;color:#cfd8d2;font-size:15px}
-.four svg{color:var(--au)}
-.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:36px}
-.cat{position:relative;aspect-ratio:3/4;border-radius:4px;overflow:hidden;border:0;padding:0;cursor:pointer;text-align:left;color:#fff;font:inherit}
-.cat svg{position:absolute;inset:0;width:100%;height:100%;transition:transform .6s}
-.cat:hover svg{transform:scale(1.06)}
-.cat span{position:absolute;left:0;right:0;bottom:0;padding:36px 14px 14px;background:linear-gradient(transparent,rgba(10,26,20,.9));font:500 19px 'Playfair Display',serif}
-.cta{position:relative;color:#fff;text-align:center;padding:110px 0;overflow:hidden;background:#143329}
-.cta>svg{position:absolute;inset:0;width:100%;height:100%}
-.cta::after{content:"";position:absolute;inset:0;background:rgba(14,38,30,.68)}
-.cta .wrap{position:relative;z-index:2}
-.cta p{max-width:52ch;margin:0 auto 30px;opacity:.92}
-.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:64px}
-form{display:grid;gap:18px}
-label{font-weight:500;font-size:14px;display:block;margin-bottom:6px}
-input,select,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);background:var(--card);color:var(--ch);font:inherit;border-radius:3px}
-textarea{min-height:110px;resize:vertical}
-.err{color:#b3261e;font-size:13px;min-height:18px;margin-top:4px}
-@media (prefers-color-scheme:dark){.err{color:#ff8a80}}
-.note{padding:14px 16px;border:1px solid var(--au);border-radius:3px;font-size:14px;display:none}
-.note.show{display:block}
-footer{background:#10241d;color:#cfd8d2;padding:56px 0 30px;font-size:14px}
-footer .top{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-bottom:34px}
-footer nav{display:flex;gap:22px;flex-wrap:wrap}
-footer a{text-decoration:none}footer a:hover{color:var(--au)}
-.modal{position:fixed;inset:0;background:rgba(10,20,16,.7);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}
-.modal.open{display:flex}
-.box{background:var(--iv);width:100%;max-width:520px;max-height:92vh;overflow:auto;padding:30px;border-radius:4px;position:relative;animation:pop .25s ease}
-@keyframes pop{from{transform:translateY(12px);opacity:0}to{transform:none;opacity:1}}
-.x{position:absolute;right:12px;top:12px;background:none;border:0;cursor:pointer;color:var(--ch);padding:6px}
-@media(max-width:980px){.grid,.four{grid-template-columns:1fr 1fr}.cats{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:760px){section{padding:60px 0}.intro,.split,.contact{grid-template-columns:1fr;gap:34px}.grid,.four{grid-template-columns:1fr}.cats{grid-template-columns:repeat(2,1fr)}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+:root{--ink:#14251f;--green:#203d31;--gold:#c9a76a;--cream:#f7f4ed;--paper:#fffdf8;--muted:#68736c;--line:#e6e0d4}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink)}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.topbar{background:var(--ink);color:#f7f4ed;font-size:12px;letter-spacing:.08em;padding:10px 0}.topbar .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;font-family:Georgia,serif;font-size:22px;font-weight:700;letter-spacing:.02em}.mark{height:40px;width:40px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-size:21px}.brand small{display:block;font-family:inherit;font-size:9px;font-weight:500;letter-spacing:.23em;color:var(--muted);margin-top:3px}.navlinks{display:flex;gap:28px;font-size:13px;color:#46564d}.navlinks a:hover{color:#9b783d}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;background:var(--gold);color:#17251e;font-weight:700;font-size:12px;letter-spacing:.04em;border:0;cursor:pointer;transition:.2s}.btn:hover{background:#b99350;transform:translateY(-1px)}.btn.dark{background:var(--ink);color:white}.btn.outline{background:transparent;border:1px solid #c8c0b0;color:var(--ink)}.hero{position:relative;min-height:590px;display:grid;grid-template-columns:1fr 1fr;background:#1d3027;color:white;overflow:hidden}.hero-copy{padding:80px max(36px,calc((100vw - 1160px)/2)) 70px max(36px,calc((100vw - 1160px)/2));padding-right:34px;align-self:center;position:relative;z-index:1}.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,5.3vw,70px);line-height:1.02;font-weight:400;letter-spacing:-.035em;margin:20px 0}.hero h1 em{color:#d9c39b;font-weight:400}.hero p{color:#d2d9d2;line-height:1.8;font-size:15px;max-width:470px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.hero .outline{color:white;border-color:#718076}.hero-photo{min-height:590px;background:linear-gradient(180deg,rgba(18,34,27,.03),rgba(18,34,27,.3)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85') center/cover}.hero-note{position:absolute;bottom:24px;right:24px;background:rgba(20,37,31,.9);padding:15px 18px;font-size:11px;letter-spacing:.08em;color:#f6f1e5}.trust{background:var(--paper);border-bottom:1px solid var(--line)}.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);padding:24px 0;gap:18px}.trust-item{display:flex;align-items:center;gap:12px;font-size:13px;color:#4e5b53}.trust-icon{width:35px;height:35px;border:1px solid var(--line);display:grid;place-items:center;color:#9b783d;font-size:17px;flex-shrink:0}.section{padding:86px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px}.section h2{font:400 clamp(32px,4vw,46px)/1.1 Georgia,serif;letter-spacing:-.025em;margin:12px 0 0}.section-intro{max-width:430px;color:var(--muted);font-size:14px;line-height:1.8;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.property{background:var(--paper);border:1px solid var(--line);overflow:hidden}.property-img{height:230px;background:#ddd;position:relative;overflow:hidden}.property-img img{height:100%;width:100%;object-fit:cover;display:block;transition:transform .5s}.property:hover .property-img img{transform:scale(1.04)}.tag{position:absolute;top:15px;left:15px;background:var(--paper);font-size:10px;text-transform:uppercase;letter-spacing:.12em;padding:8px 10px}.property-body{padding:22px}.property h3{font:400 24px Georgia,serif;margin:0 0 9px}.property p{font-size:13px;line-height:1.7;color:var(--muted);margin:0 0 18px}.property-foot{border-top:1px solid var(--line);padding-top:15px;display:flex;align-items:center;justify-content:space-between;font-size:12px}.property-foot a{color:#876831;font-weight:700}.disclaimer{font-size:11px;color:#7d837d;line-height:1.6;margin-top:18px}.why{background:#eae6dc}.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.why-image{height:450px;background:url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85') center/cover;position:relative}.image-label{position:absolute;bottom:20px;left:20px;background:var(--paper);padding:18px 20px;max-width:210px;font:20px/1.2 Georgia,serif}.why-copy>p{color:var(--muted);font-size:14px;line-height:1.85;max-width:500px}.features{display:grid;grid-template-columns:1fr 1fr;gap:22px 24px;margin-top:28px}.feature{border-top:1px solid #d1cabc;padding-top:14px}.feature b{display:block;font:20px Georgia,serif;margin-bottom:7px}.feature span{font-size:12px;line-height:1.7;color:var(--muted)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:35px}.step{border-top:1px solid var(--gold);padding-top:20px}.step-num{font:italic 30px Georgia,serif;color:#b08a4b}.step h3{font:22px Georgia,serif;font-weight:400;margin:13px 0 8px}.step p{font-size:13px;line-height:1.8;color:var(--muted);margin:0}.contact{background:var(--ink);color:white;padding:76px 0}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}.contact h2{font:400 clamp(34px,4vw,48px)/1.1 Georgia,serif;margin:13px 0 16px}.contact p{color:#c6d0c8;line-height:1.8;font-size:14px}.contact-list{display:grid;gap:12px;margin-top:28px;color:#e4e9e3;font-size:13px}.contact-list span{color:var(--gold);margin-right:10px}.form{background:#fffdf8;color:var(--ink);padding:28px}.form h3{font:26px Georgia,serif;font-weight:400;margin:0 0 8px}.form>p{color:var(--muted);font-size:12px;margin:0 0 22px}.field{display:grid;gap:7px;margin-bottom:14px}.field label{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#526057}.field input,.field select,.field textarea{width:100%;font:14px inherit;font-family:inherit;border:1px solid var(--line);background:white;padding:12px;color:var(--ink);border-radius:0}.field textarea{min-height:88px;resize:vertical}.form .btn{width:100%}.fineprint{font-size:10px!important;color:#7a817b!important;line-height:1.6!important;margin-top:12px!important}.footer{background:#0d1b15;color:#9faea3;padding:22px 0;font-size:11px}.footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer strong{color:#e6dfd0;letter-spacing:.08em}.mobile-cta{display:none}
+@media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:65px 25px 45px}.hero-photo{min-height:300px}.hero-note{bottom:14px;right:14px}.trust .wrap{grid-template-columns:1fr;padding:18px 0}.trust-item{font-size:12px}.section{padding:62px 0}.section-head{display:block}.section-intro{margin-top:18px}.cards{grid-template-columns:1fr}.property-img{height:250px}.why-grid,.contact-grid{grid-template-columns:1fr;gap:32px}.why-image{height:330px}.steps{grid-template-columns:1fr;gap:28px}.features{gap:20px}.contact{padding:60px 0}.mobile-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:10;padding:10px;background:rgba(20,37,31,.97);gap:10px}.mobile-cta a{flex:1}.mobile-cta .btn{padding:12px 8px}.footer{padding-bottom:78px}}
 </style>
 </head>
 <body>
-<header id="hd"><div class="wrap nav">
-<a class="logo" href="#home">Barsana <b>Realities</b></a>
-<button class="burger" id="bg" aria-label="Open menu" aria-expanded="false"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
-<nav class="links" id="lk" aria-label="Main">
-<a href="#home">Home</a><a href="#about">About</a><a href="#properties">Properties</a><a href="#why">Why Choose Us</a><a href="#contact">Contact</a>
-<a class="btn" href="#contact" data-open="">Enquire Now</a>
-</nav></div></header>
-
+<!-- <div class="topbar"><div class="wrap"><span>PROPERTY SHOWCASE CONCEPT · BHUJ, GUJARAT</span><span>Thoughtfully presented. Easy to explore.</span></div></div> -->
+<header class="wrap nav"><a class="brand" href="#home" aria-label="Barsana Realities home"><span class="mark">B</span><span>BARSANA REALITIES<small>PROPERTY · POSSIBILITIES · PLACE</small></span></a><nav class="navlinks"><a href="#projects">Projects</a><a href="#about">Why Barsana</a><a href="#process">How it works</a><a href="#contact">Contact</a></nav><a class="btn dark" href="#contact">DISCUSS A PROPERTY ↗</a></header>
 <main>
-<section class="hero" id="home" style="padding:120px 0 80px">
-<div data-art="hero" style="position:absolute;inset:0"></div>
-<div class="wrap">
-<span class="demo">Design demo</span>
-<h1>Find a Place That Feels Like Home.</h1>
-<p>Explore thoughtfully designed spaces and discover your next real estate opportunity.</p>
-<div class="row"><a class="btn" href="#properties">Explore Properties</a><a class="btn ghost" href="#contact" data-open="">Enquire Now</a></div>
-</div>
-<span class="tag">Conceptual illustration, not a Barsana project</span>
-</section>
-
-<section id="intro"><div class="wrap intro">
-<div><h2>Building Spaces for Better Living</h2>
-<p class="lead">We help you look at property with clarity: what suits your needs, what to ask, and what to compare. Our approach centres on careful selection, attention to quality, and service built around the person making the decision.</p></div>
-<div class="pts">
-<div><h3>Thoughtful selection</h3><p>Options are considered against your requirements, not pushed for volume.</p></div>
-<div><h3>Quality in the details</h3><p>We look closely at design, layout and finish before recommending a space.</p></div>
-<div><h3>Service built around you</h3><p>Questions are answered plainly, and every enquiry gets a personal reply.</p></div>
-</div></div></section>
-
-<section id="properties" style="background:var(--card)"><div class="wrap">
-<span class="demo">Illustrative concepts, not actual listings</span>
-<h2>Featured Properties</h2>
-<p class="lead">These cards show how listings will look. Locations, prices and availability are intentionally left out until verified.</p>
-<div class="grid" id="grid"></div>
-</div></section>
-
-<section id="about"><div class="wrap split">
-<div class="pic" data-art="site" role="img" aria-label="Conceptual illustration of a building site with a crane and framed structure"></div>
-<div><h2>About Barsana Realities</h2>
-<p class="lead">Buying or investing in property is a big decision. Barsana Realities is a Gujarat-based real estate business, and this page is a design proposal for how its story can be told.</p>
-<p class="lead">The aim is simple: informed decisions, clear communication, and attention to detail at every step. Verified company history, projects and team details can be added here once supplied.</p>
-<a class="btn dark" href="#contact" data-open="">Talk to Us</a></div>
-</div></section>
-
-<section class="why" id="why"><div class="wrap">
-<h2>Why Choose Us</h2>
-<p class="lead">Our service principles guide how we work with every enquiry.</p>
-<div class="four">
-<div><svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg><h3>Customer-focused guidance</h3><p>Advice shaped around your needs, budget and timeline.</p></div>
-<div><svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg><h3>Clear communication</h3><p>Plain answers and honest information at each stage.</p></div>
-<div><svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg><h3>Thoughtful property selection</h3><p>Options reviewed for design, layout and suitability.</p></div>
-<div><svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg><h3>End-to-end enquiry assistance</h3><p>One point of contact from first question to next step.</p></div>
-</div></div></section>
-
-<section id="discover"><div class="wrap">
-<span class="demo">Demo showcase</span>
-<h2>Property Discovery</h2>
-<p class="lead">Categories will be confirmed with Barsana Realities. Select one to start an enquiry.</p>
-<div class="cats" id="cats"></div>
-</div></section>
-
-<section class="cta"><div data-art="cta" style="position:absolute;inset:0"></div>
-<div class="wrap"><h2>Let's Find the Right Property for You.</h2>
-<p>Tell us what you're looking for, and our team can help you explore suitable options.</p>
-<a class="btn" href="#contact" data-open="">Send an Enquiry</a></div></section>
-
-<section id="contact"><div class="wrap contact">
-<div><h2>Contact</h2>
-<p class="lead">Share your requirements and we will get back to you. Phone, email and office details will appear here once verified.</p></div>
-<form id="f" novalidate>
-<div><label for="n">Full name</label><input id="n" autocomplete="name"><div class="err" data-e="n"></div></div>
-<div><label for="p">Phone number</label><input id="p" type="tel" autocomplete="tel" inputmode="tel"><div class="err" data-e="p"></div></div>
-<div><label for="m">Email (optional)</label><input id="m" type="email" autocomplete="email"><div class="err" data-e="m"></div></div>
-<div><label for="t">Property interest</label><select id="t"></select><div class="err" data-e="t"></div></div>
-<div><label for="g">Message</label><textarea id="g"></textarea><div class="err" data-e="g"></div></div>
-<button class="btn dark" type="submit">Send Enquiry</button>
-<div class="note" id="nt" role="status"></div>
-</form></div></section>
-</main>
-
-<footer><div class="wrap">
-<div class="top"><div><div class="logo" style="margin-bottom:8px">Barsana <b>Realities</b></div>Real estate, Gujarat.</div>
-<nav aria-label="Footer"><a href="#home">Home</a><a href="#about">About</a><a href="#properties">Properties</a><a href="#why">Why Choose Us</a><a href="#contact">Contact</a><a href="#privacy" data-priv="">Privacy Policy</a></nav></div>
-<div>© <span id="yr"></span> Barsana Realities. Design demo with conceptual illustrations. Not an offer of sale.</div>
-</div></footer>
-
-<div class="modal" id="md" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="box">
-<button class="x" id="mx" aria-label="Close"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
-<div id="mb"></div></div></div>
-
+<section class="hero" id="home"><div class="hero-copy"><div class="eyebrow">A more considered way to explore property</div><h1>Find a place<br>for your <em>next chapter.</em></h1><p>Explore property opportunities with a clearer view of the details that matter — location, features, photographs and a direct way to enquire.</p><div class="hero-actions"><a class="btn" href="#projects">EXPLORE THE SHOWCASE ↘</a><a class="btn outline" href="#contact">MAKE AN ENQUIRY</a></div></div><div class="hero-photo" role="img" aria-label="Contemporary residential architecture"></div><div class="hero-note">A SAMPLE WEBSITE CONCEPT · CUSTOMISABLE FOR ACTUAL PROJECTS</div></section>
+<div class="trust"><div class="wrap"><div class="trust-item"><span class="trust-icon">⌂</span><span>Property details in one place</span></div><div class="trust-item"><span class="trust-icon">◇</span><span>Designed for mobile browsing</span></div><div class="trust-item"><span class="trust-icon">↗</span><span>Simple enquiry journey</span></div></div></div>
+<section class="section" id="projects"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Explore opportunities</div><h2>A closer look at<br>what could be yours.</h2></div><p class="section-intro">A project showcase can help visitors compare key details before they get in touch. The sample cards below are placeholders and should be replaced with verified Barsana Realities listings.</p></div><div class="cards">
+<article class="property"><div class="property-img"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80" alt="Modern home exterior" loading="lazy"><span class="tag">Sample listing</span></div><div class="property-body"><h3>Residential Living</h3><p>A sample project card for presenting the property's location, key amenities, available configurations and verified photographs.</p><div class="property-foot"><span>Details on request</span><a href="#contact" data-interest="Residential Living">ENQUIRE ↗</a></div></div></article>
+<article class="property"><div class="property-img"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="Contemporary residential interior" loading="lazy"><span class="tag">Sample listing</span></div><div class="property-body"><h3>Modern Spaces</h3><p>Use this space to highlight the design, practical features, neighbourhood access and other confirmed project benefits.</p><div class="property-foot"><span>Details on request</span><a href="#contact" data-interest="Modern Spaces">ENQUIRE ↗</a></div></div></article>
+<article class="property"><div class="property-img"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Contemporary property exterior" loading="lazy"><span class="tag">Sample listing</span></div><div class="property-body"><h3>Land & Investment</h3><p>A flexible card for land or investment opportunities, with verified location, plot details and enquiry information.</p><div class="property-foot"><span>Details on request</span><a href="#contact" data-interest="Land & Investment">ENQUIRE ↗</a></div></div></article></div><p class="disclaimer">Presentation note: project names, availability, prices, specifications and imagery must be confirmed by the business before publication. These sample cards do not represent verified inventory or an investment claim.</p></div></section>
+<section class="section why" id="about"><div class="wrap why-grid"><div class="why-image" role="img" aria-label="Bright contemporary home interior"><div class="image-label">Space to imagine. Details to decide.</div></div><div class="why-copy"><div class="eyebrow">A clearer property journey</div><h2>Good decisions start<br>with better information.</h2><p>A well-organised digital presence gives prospective buyers one place to understand a project and take the next step. The final content should reflect Barsana Realities' real portfolio, brand and customer process.</p><div class="features"><div class="feature"><b>Project pages</b><span>Present verified project details, photos and location information.</span></div><div class="feature"><b>Clear next steps</b><span>Help visitors call, message or request a site visit.</span></div><div class="feature"><b>Mobile-first</b><span>Make browsing comfortable across phones, tablets and desktops.</span></div><div class="feature"><b>Search-ready structure</b><span>Build clear page titles and content that can support search visibility over time.</span></div></div></div></div></section>
+<section class="section" id="process"><div class="wrap"><div class="eyebrow">From interest to enquiry</div><h2>A simple, considered process.</h2><div class="steps"><div class="step"><div class="step-num">01</div><h3>Explore</h3><p>Visitors browse projects, view verified details and identify what fits their needs.</p></div><div class="step"><div class="step-num">02</div><h3>Ask</h3><p>They use a direct contact option to ask about availability, pricing or a property visit.</p></div><div class="step"><div class="step-num">03</div><h3>Connect</h3><p>The Barsana team follows up, answers questions and arranges the appropriate next step.</p></div></div></div></section>
+<section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Let's talk property</div><h2>Have a project<br>in mind?</h2><p>Ask about a property, request more information or arrange a site visit. Update the contact details below with the official business number before launch.</p><div class="contact-list"><div><span>↗</span>Direct enquiry to the team</div><div><span>⌖</span>Bhuj, Gujarat — confirm official office details</div><div><span>◇</span>Site visit requests by appointment</div></div></div><form class="form" id="enquiryForm"><h3>Make an enquiry</h3><p>Share a few details and we'll prepare your message.</p><div class="field"><label for="name">Your name</label><input id="name" name="name" placeholder="Enter your name" required></div><div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" inputmode="tel" placeholder="Enter your phone number" required></div><div class="field"><label for="interest">Interested in</label><select id="interest" name="interest"><option>General enquiry</option><option>Residential Living</option><option>Modern Spaces</option><option>Land & Investment</option><option>Arrange a site visit</option></select></div><div class="field"><label for="message">Message (optional)</label><textarea id="message" name="message" placeholder="Tell us what you'd like to know"></textarea></div><button class="btn" type="submit">PREPARE WHATSAPP ENQUIRY ↗</button><p class="fineprint">Demo behaviour: this form opens a pre-filled WhatsApp message. Before launch, replace the placeholder WhatsApp number in the page code with the business's verified number. No data is stored by this demo.</p><div id="formStatus" aria-live="polite" class="fineprint"></div></form></div></section>
+</main><footer class="footer"><div class="wrap"><span><strong>BARSANA REALITIES</strong> · Website concept presentation</span><span>Sample content only · Verify all business details before launch</span><span>© <span id="year"></span></span></div></footer><div class="mobile-cta"><a class="btn" href="#projects">VIEW PROJECTS</a><a class="btn dark" href="#contact">MAKE ENQUIRY</a></div>
 <script>
-const C={g:'#173D32',au:'#C5A46D',iv:'#F8F6F0',ch:'#242824'};
-const sky=(a,b,id)=>`<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs><rect width="800" height="600" fill="url(#${id})"/>`;
-const win=(x,y,w,h,on)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${on?'#F2D9A0':'#9db4ad'}" opacity="${on?1:.6}"/>`;
-const tree=(x,y,s)=>`<rect x="${x-3*s}" y="${y-30*s}" width="${6*s}" height="${30*s}" fill="#0b241c"/><circle cx="${x}" cy="${y-50*s}" r="${28*s}" fill="#2c6a50"/><circle cx="${x+14*s}" cy="${y-38*s}" r="${20*s}" fill="#1f5640"/>`;
-const A={
-villa:id=>`<svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${sky('#f0c98e','#f8e9cf',id)}<rect y="470" width="800" height="130" fill="#2f6a4f"/><rect x="120" y="300" width="360" height="170" fill="#f4efe3"/><rect x="40" y="250" width="300" height="20" fill="#173D32"/><rect x="60" y="270" width="260" height="200" fill="#e9e2d0"/><rect x="330" y="250" width="380" height="18" fill="#173D32"/><rect x="350" y="268" width="330" height="202" fill="#fbf8f0"/>${win(80,300,70,120,1)}${win(170,300,70,120,1)}${win(260,300,45,120,0)}${win(375,300,110,130,1)}${win(510,300,70,130,0)}${win(600,300,60,130,1)}<rect x="0" y="470" width="800" height="10" fill="#C5A46D"/>${tree(740,480,1.2)}${tree(60,490,1)}<rect x="0" y="500" width="800" height="100" fill="#1f5640" opacity=".5"/></svg>`,
-tower:id=>`<svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${sky('#cfe0e4','#f1efe6',id)}<rect y="520" width="800" height="80" fill="#8da89b"/><rect x="250" y="70" width="300" height="450" fill="#e8e4d8"/><rect x="250" y="70" width="300" height="14" fill="#173D32"/>${[0,1,2,3,4,5,6].map(r=>[0,1,2,3].map(c=>win(272+c*66,100+r*58,44,36,(r+c)%3!==0)+`<rect x="${268+c*66}" y="${138+r*58}" width="52" height="5" fill="#C5A46D"/>`).join('')).join('')}<rect x="130" y="300" width="130" height="220" fill="#d9d4c4"/><rect x="540" y="340" width="130" height="180" fill="#d9d4c4"/>${[0,1,2].map(r=>win(150,320+r*60,30,36,1)+win(200,320+r*60,30,36,0)).join('')}${tree(90,540,1)}${tree(710,540,1.1)}</svg>`,
-bung:id=>`<svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${sky('#b9d6c9','#eef3e6',id)}<rect y="440" width="800" height="160" fill="#3f8060"/><path d="M0 560 Q400 470 800 560 V600 H0Z" fill="#c8b48a"/><polygon points="150,300 400,190 650,300" fill="#173D32"/><rect x="180" y="300" width="440" height="180" fill="#f6f0e0"/>${win(220,340,70,90,1)}${win(330,340,70,90,1)}${win(440,340,70,90,0)}<rect x="540" y="360" width="50" height="120" fill="#7a5a36"/><rect x="170" y="296" width="460" height="10" fill="#C5A46D"/>${tree(90,480,1.3)}${tree(720,480,1.1)}</svg>`,
-comm:id=>`<svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${sky('#2b4a60','#e5b88b',id)}<rect y="520" width="800" height="80" fill="#2b3430"/><rect x="100" y="170" width="260" height="350" fill="#1b2a30"/><rect x="380" y="110" width="320" height="410" fill="#223540"/>${[0,1,2,3,4,5,6,7].map(r=>[0,1,2,3,4].map(c=>`<rect x="${400+c*58}" y="${130+r*46}" width="42" height="30" fill="${(r*3+c)%4===0?'#F2D9A0':'#6f8fa0'}" opacity=".85"/>`).join('')).join('')}${[0,1,2,3,4,5].map(r=>[0,1,2,3].map(c=>`<rect x="${120+c*58}" y="${190+r*50}" width="42" height="32" fill="${(r+c)%3===0?'#F2D9A0':'#6f8fa0'}" opacity=".85"/>`).join('')).join('')}<rect x="100" y="165" width="260" height="8" fill="#C5A46D"/></svg>`,
-plot:id=>`<svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${sky('#cfe3ea','#fbf1d9',id)}<circle cx="620" cy="140" r="54" fill="#f5d489"/><path d="M0 360 Q250 300 520 360 T800 330 V600 H0Z" fill="#6d9a5f"/><path d="M0 440 Q300 380 800 450 V600 H0Z" fill="#4d8050"/><path d="M80 600 L330 400 L420 400 L420 600Z" fill="#d3bf92" opacity=".55"/><path d="M200 520 H700 M260 470 H640" stroke="#fff" stroke-width="3" stroke-dasharray="14 10" opacity=".8"/><path d="M420 600 V420 M560 600 V440 M700 600 V460" stroke="#fff" stroke-width="3" stroke-dasharray="14 10" opacity=".8"/><rect x="498" y="380" width="3" height="60" fill="#173D32"/><polygon points="501,380 540,392 501,404" fill="#C5A46D"/></svg>`,
-site:id=>`<svg viewBox="0 0 800 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${sky('#c9dbe0','#f6ecd8',id)}<rect y="500" width="800" height="140" fill="#b9a880"/><rect x="200" y="260" width="360" height="240" fill="none" stroke="#173D32" stroke-width="6"/>${[0,1,2].map(i=>`<rect x="${200+i*120}" y="260" width="6" height="240" fill="#173D32"/>`).join('')}${[0,1,2].map(i=>`<rect x="200" y="${260+i*80}" width="360" height="6" fill="#173D32"/>`).join('')}<rect x="200" y="260" width="240" height="120" fill="#e8e0cc" opacity=".9"/><rect x="620" y="90" width="10" height="410" fill="#C5A46D"/><rect x="330" y="90" width="320" height="10" fill="#C5A46D"/><path d="M630 100 L480 98" stroke="#173D32" stroke-width="3"/><path d="M420 100 V210" stroke="#173D32" stroke-width="2"/><rect x="396" y="210" width="48" height="26" fill="#173D32"/><rect x="60" y="440" width="90" height="60" fill="#173D32"/><rect x="70" y="450" width="30" height="22" fill="#9db4ad"/></svg>`,
-hero:id=>`<svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${sky('#e8a76c','#f6dfb8',id).replace('width="800" height="600"','width="1600" height="900"')}<circle cx="1180" cy="330" r="90" fill="#fbe7b5" opacity=".9"/><rect y="700" width="1600" height="200" fill="#1f5640"/><rect x="760" y="450" width="620" height="250" fill="#f4efe3"/><rect x="700" y="400" width="500" height="26" fill="#173D32"/><rect x="730" y="426" width="450" height="274" fill="#fbf8f0"/><rect x="1180" y="370" width="320" height="22" fill="#173D32"/>${[0,1,2,3,4].map(i=>`<rect x="${790+i*100}" y="${470}" width="70" height="${180}" fill="${i%2?'#9db4ad':'#F2D9A0'}" opacity=".95"/>`).join('')}<rect x="760" y="700" width="760" height="12" fill="#C5A46D"/><rect x="0" y="760" width="1600" height="140" fill="#0f2a22" opacity=".45"/><g transform="translate(1560,720) scale(2.4)">${tree(0,0,1)}</g><g transform="translate(620,730) scale(2)">${tree(0,0,1)}</g></svg>`,
-cta:id=>A.hero(id).replace('opacity=".9"','opacity=".5"')
-};
-const P=[
-{k:'villa',t:'Contemporary Villa',ty:'Villa',d:'A low-slung family home with deep overhangs, warm stone and landscaped frontage.'},
-{k:'tower',t:'Modern Apartment Residences',ty:'Apartments',d:'A mid-rise block with balconies on every floor and shaded communal space below.'},
-{k:'bung',t:'Garden Bungalow',ty:'Residential',d:'A pitched-roof home set in gardens, with a generous veranda and quiet surroundings.'},
-{k:'comm',t:'Commercial Frontage',ty:'Commercial Space',d:'Glazed office and retail floors designed for visibility and flexible layouts.'},
-{k:'plot',t:'Planned Plotted Land',ty:'Land and Plots',d:'A laid-out parcel with internal roads and room to build to your own design.'},
-{k:'site',t:'Built to Your Brief',ty:'Residential',d:'Illustrates how a custom home takes shape from structure to finish.'}
-];
-const types=['Residential Properties','Apartments','Villas','Commercial Spaces','Land and Plots','Not sure yet'];
-let n=0;const art=(k)=>A[k]('g'+(n++));
-document.querySelectorAll('[data-art]').forEach(e=>e.insertAdjacentHTML('afterbegin',art(e.dataset.art)));
-document.getElementById('grid').innerHTML=P.map(p=>`<article class="card"><div class="img" role="img" aria-label="Conceptual illustration: ${p.t}">${art(p.k)}<span class="badge">Illustrative concept</span></div><div class="body"><small>${p.ty}</small><h3>${p.t}</h3><p>${p.d}</p><button class="btn dark" data-req="${p.t}" data-ty="${p.ty}">Request Details</button></div></article>`).join('');
-const cm=[['villa','Villas',2],['tower','Apartments',1],['bung','Residential Properties',0],['comm','Commercial Spaces',3],['plot','Land and Plots',4]];
-document.getElementById('cats').innerHTML=cm.map(c=>`<button class="cat" data-cat="${c[2]}" aria-label="${c[1]}: start an enquiry">${art(c[0])}<span>${c[1]}</span></button>`).join('');
-const sel=document.getElementById('t');
-sel.innerHTML='<option value="">Select an interest</option>'+types.map(t=>`<option>${t}</option>`).join('');
-document.getElementById('yr').textContent=new Date().getFullYear();
-
-const hd=document.getElementById('hd'),lk=document.getElementById('lk'),bg=document.getElementById('bg');
-const sc=()=>hd.classList.toggle('solid',scrollY>40);addEventListener('scroll',sc,{passive:true});sc();
-bg.onclick=()=>{const o=lk.classList.toggle('open');bg.setAttribute('aria-expanded',o)};
-lk.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{lk.classList.remove('open');bg.setAttribute('aria-expanded',false)}));
-
-const md=document.getElementById('md'),mb=document.getElementById('mb');let last;
-function form(id,pre){return `<h2 id="mt" style="font-size:28px">${pre.title}</h2><p class="lead" style="margin:0 0 18px">${pre.sub}</p><form id="${id}" novalidate><div><label for="${id}n">Full name</label><input id="${id}n"><div class="err" data-e="n"></div></div><div><label for="${id}p">Phone number</label><input id="${id}p" type="tel" inputmode="tel"><div class="err" data-e="p"></div></div><div><label for="${id}m">Email (optional)</label><input id="${id}m" type="email"><div class="err" data-e="m"></div></div><div><label for="${id}g">Message</label><textarea id="${id}g">${pre.msg}</textarea></div><button class="btn dark" type="submit">Send Enquiry</button><div class="note" role="status"></div></form>`}
-function openM(html){last=document.activeElement;mb.innerHTML=html;md.classList.add('open');document.body.style.overflow='hidden';wire(mb.querySelector('form'),'m');const f=mb.querySelector('input');f&&f.focus()}
-function closeM(){md.classList.remove('open');document.body.style.overflow='';last&&last.focus()}
-document.getElementById('mx').onclick=closeM;
-md.addEventListener('click',e=>{if(e.target===md)closeM()});
-addEventListener('keydown',e=>{if(e.key==='Escape'&&md.classList.contains('open'))closeM()});
-document.addEventListener('click',e=>{
-const r=e.target.closest('[data-req]');
-if(r){openM(form('q',{title:'Request details',sub:r.dataset.req+' (illustrative concept). Tell us how to reach you.',msg:'I would like details about: '+r.dataset.req+'.'}))}
-const c=e.target.closest('[data-cat]');
-if(c){sel.selectedIndex=+c.dataset.cat+1;document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('n').focus({preventScroll:true}),600)}
-const pv=e.target.closest('[data-priv]');
-if(pv){e.preventDefault();openM('<h2 id="mt" style="font-size:28px">Privacy Policy</h2><p class="lead">A full privacy policy will be added once Barsana Realities confirms how enquiries are stored and used. This demo does not collect or send any data.</p>')}
-});
-function wire(f,pfx){
-f.addEventListener('submit',e=>{e.preventDefault();
-const q=s=>f.querySelector(s),g=i=>f.elements[i]||f.querySelector('[id$="'+i+'"]');
-const nm=g('n'),ph=g('p'),em=g('m'),ty=g('t');let ok=true;
-const set=(k,msg)=>{const el=f.querySelector('[data-e="'+k+'"]');if(el)el.textContent=msg;if(msg)ok=false};
-set('n',nm.value.trim().length<2?'Enter your full name.':'');
-set('p',/^(\+91[\s-]?)?[6-9]\d{9}$/.test(ph.value.replace(/[\s-]/g,'').replace(/^\+91/,'+91'))?'':'Enter a valid 10-digit Indian mobile number.');
-set('m',em.value&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)?'Enter a valid email address.':'');
-if(ty)set('t',ty.value?'':'Choose a property interest.');
-const gm=f.querySelector('textarea');if(gm&&f.id==='f')set('g',gm.value.trim().length<5?'Add a short message.':'');
-const nt=f.querySelector('.note');
-if(ok){nt.textContent='Details look good. This demo has no backend connected, so nothing was sent. Once a form service or WhatsApp number is configured, enquiries will be delivered.';nt.classList.add('show')}else nt.classList.remove('show')})}
-wire(document.getElementById('f'),'f');
-document.querySelectorAll('[data-open]').forEach(a=>a.addEventListener('click',e=>{if(a.closest('.cta')||a.closest('.hero')||a.closest('#about')||a.closest('.links')){e.preventDefault();document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('n').focus({preventScroll:true}),600)}}));
+// Replace with Barsana Realities' verified WhatsApp number, country code included, digits only.
+const WHATSAPP_NUMBER = '910000000000';
+document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('[data-interest]').forEach(link=>link.addEventListener('click',()=>{document.getElementById('interest').value=link.dataset.interest;}));
+document.getElementById('enquiryForm').addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('name').value.trim();const phone=document.getElementById('phone').value.trim();const interest=document.getElementById('interest').value;const message=document.getElementById('message').value.trim();const text=`Hello Barsana Realities, my name is ${name}. My phone number is ${phone}. I'm interested in: ${interest}. ${message}`;if(WHATSAPP_NUMBER==='910000000000'){document.getElementById('formStatus').textContent='Demo only: add the verified business WhatsApp number in the code before using this form with customers. Your message has not been sent.';return;}window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer');});
 </script>
-</body>
-</html>
+</body></html>
